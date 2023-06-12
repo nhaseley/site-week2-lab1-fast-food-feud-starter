@@ -32,11 +32,12 @@ export function App() {
         <div className="categories options">
           <h2 className="title">Categories</h2>
           {/* YOUR CODE HERE */}
-          {categories.map(category => 
-          <p 
-            key={category}>{category}
-          </p>)
-        }
+          {categories.map(category => {
+          return (
+          <Chip 
+            label = {category} key={category}
+          />)
+        })}
         </div>
       </div>
 
@@ -54,11 +55,13 @@ export function App() {
         <div className="RestaurantsRow">
           <h2 className="title">Restaurants</h2>
           <div className="restaurants options">
-            <Chip label="chip label here" isActive={isActive} handleClick = {() => setIsActive(!isActive)} />
-            {restaurants.map(restaurant => 
-          <p 
-            key={restaurant}>{restaurant}
-          </p>)
+            {/* <Chip label="chip label here" isActive={isActive} handleClick = {() => setIsActive(!isActive)} /> */}
+            {restaurants.map(restaurant => {
+              // const buttonClassName;
+              return (
+          <Chip 
+            label ={restaurant} key={restaurant}
+            />)})
         }
           </div>
         </div>

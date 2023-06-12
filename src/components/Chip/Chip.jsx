@@ -1,9 +1,11 @@
 import "./Chip.css"
 
-export function Chip({ label = "", isActive = false, handleClick }) {
+export function Chip({ label = "", isActive = true}) {
+  // const buttonClassName;
   return (
-    <button className="chip"onClick={handleClick}>
-      <p className="label">{isActive ? "IM ACTIVE BABY" : label} </p>
+    <button className={`chip ${isActive ? "active": ""}`}>
+      <p className="label">{label} </p>
+      
       <span className="close" role="button">{`X`}</span>
     </button>
   )
